@@ -46,10 +46,68 @@ body{
 .deck{
     border: 3px solid black;
     margin-top: 20px;
-    width: 300px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 600px;
     height: 400px;
     justify-content: center;
-    display: flex;
+    display:inherit;
+    position: relative;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    background-color: tan;
+    position:absolute;
+}
+.card-icon-top {
+    position:absolute;
+    bottom: 79%;
+    width: 60px;
+    height: 60px;
+}
+.card-icon-bottom {
+    position:absolute;
+    bottom:3%;
+    right:0;
+    width: 60px;
+    height: 60px;
+}
+.card-icon-mid {
+    position:absolute;
+    bottom:25%;
+    top:14%;
+    width: 200px;
+    height: 200px;
+}
+
+#c1 {
+ 
+}
+#c2 {
+
+}
+#c3 {
+
+}
+#c4 {
+
+}
+#c5 {
+
+}
+#c6 {
+
+}
+#c7 {
+
+}
+#c8 {
+
+}
+#c9 {
+
 }
 .robot-avatar, .user-avatar{
     width: 50px;
