@@ -48,7 +48,7 @@ body{
     margin-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    width: 800px;
+    width: 600px;
     height: 400px;
     justify-content: center;
     display:inherit;
@@ -77,10 +77,37 @@ body{
 .card-icon-mid {
     position:absolute;
     bottom:25%;
-    top:12%;
-    left: -3%;
+    top:14%;
     width: 200px;
     height: 200px;
+}
+
+#c1 {
+ 
+}
+#c2 {
+
+}
+#c3 {
+
+}
+#c4 {
+
+}
+#c5 {
+
+}
+#c6 {
+
+}
+#c7 {
+
+}
+#c8 {
+
+}
+#c9 {
+
 }
 .robot-avatar, .user-avatar{
     width: 50px;
