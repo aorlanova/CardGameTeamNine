@@ -1,190 +1,291 @@
-body{
-    margin: 0;
-    padding: 10px;
-    background-image: url(images/background.jpg);
-    background-size: contain;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+  margin: 0;
+  padding: 10px;
+  background-image: url(images/background.jpg);
+  background-size: contain;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.header h1{
-    margin-top: 10px;
+.header h1 {
+  margin-top: 10px;
 }
 
-.header{
-    height: 70px;
-    border-bottom: 3px solid black;
-    text-align: center;
+.header {
+  height: 70px;
+  border-bottom: 3px solid black;
+  text-align: center;
 }
 
-.players{
-    margin-top: 20px;
-    height: 250px;
-    padding: 20px;
-    justify-content: center;
-    display: flex;
-    padding-right: 35px;
+.players {
+  margin-top: 20px;
+  height: 250px;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  padding-right: 35px;
 }
 
-.player1, .player2, .player3{
-    border: 3px solid black;
-    margin-top: 5px;
-    width: 660px;
-    height: 250px;
-    display: inline-block;
-    margin-left: 20px;
+.player1,
+.player2,
+.player3 {
+  border: 3px solid black;
+  margin-top: 5px;
+  width: 660px;
+  height: 250px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
-.deck-border{
-    margin-top: 10px;
-    height: 450px;
-    justify-content: center;
-    display: flex;
-    margin-left: 280px;
-    margin-right: 280px;
+.deck-border {
+  margin-top: 10px;
+  height: 450px;
+  justify-content: center;
+  display: flex;
+  margin-left: 280px;
+  margin-right: 280px;
 }
 
-.deck{
-    border: 3px solid black;
-    margin-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 600px;
-    height: 400px;
-    justify-content: center;
-    display: inherit;
-    position: relative;
+.deck {
+  border: 3px solid black;
+  margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 600px;
+  height: 400px;
+  justify-content: center;
+  display: inherit;
+  position: relative;
 }
 
 .card {
-    width: 200px;
-    height: 300px;
-    margin-top: 50px;
-    background-color: tan;
-    position:absolute;
+  width: 200px;
+  height: 300px;
+  margin-top: 50px;
+  background-color: tan;
+  position: absolute;
 }
 
 .card-icon-top {
-    position:absolute;
-    bottom: 79%;
-    width: 60px;
-    height: 60px;
+  position: absolute;
+  bottom: 79%;
+  width: 60px;
+  height: 60px;
 }
 
 .card-icon-bottom {
-    position:absolute;
-    bottom:3%;
-    right:0;
-    width: 60px;
-    height: 60px;
+  position: absolute;
+  bottom: 3%;
+  right: 0;
+  width: 60px;
+  height: 60px;
 }
 
 .card-icon-mid {
-    position:absolute;
-    bottom:25%;
-    top:14%;
-    width: 200px;
-    height: 200px;
+  position: absolute;
+  bottom: 25%;
+  top: 14%;
+  width: 200px;
+  height: 200px;
 }
 
 @keyframes moveRight {
-    to {
-        transform: translateX(300px);
-    }
+  to {
+    transform: translateX(300px);
+  }
 }
 
 @keyframes moveLeft {
-    to {
-        transform: translateX(-300px);
-    }
+  to {
+    transform: translateX(-300px);
+  }
 }
 
 @keyframes returnDeck {
-    to {
-        transform: translateX(0);
-    }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes adjustZ {
-    to {
-        z-index: 9;
-    }
-}
-
-
-#c1 { 
-    animation: 
-        moveRight 1s ease-in-out 0.5s forwards,
-        returnDeck 1s ease-in-out 4s forwards,
-        adjustZ 0.5s forwards 4.1s; 
+  to {
     z-index: 9;
-}
-#c2 { 
-    animation: 
-        moveLeft 1s ease-in-out 0.5s forwards,
-        returnDeck 1s ease-in-out 4.5s forwards,
-        adjustZ 0.5s forwards 4.6s; 
-    z-index: 8;
-}
-#c3 { 
-    animation: 
-        moveRight 1s ease-in-out 1s forwards,
-        returnDeck 1s ease-in-out 5s forwards,
-        adjustZ 0.5s forwards 5.1s; 
-    z-index: 7;
-}
-#c4 { 
-    animation: 
-        moveLeft 1s ease-in-out 1s forwards,
-        returnDeck 1s ease-in-out 5.5s forwards,
-        adjustZ 0.5s forwards 5.6s; 
-    z-index: 6;
-}
-#c5 { 
-    animation: 
-        moveRight 1s ease-in-out 1.5s forwards,
-        returnDeck 1s ease-in-out 6s forwards,
-        adjustZ 0.5s forwards 6.1s; 
-    z-index: 5;
-}
-#c6 { 
-    animation: 
-        moveLeft 1s ease-in-out 1.5s forwards,
-        returnDeck 1s ease-in-out 6.5s forwards,
-        adjustZ 0.5s forwards 6.6s; 
-    z-index: 4;
-}
-#c7 { 
-    animation: 
-        moveRight 1s ease-in-out 2s forwards,
-        returnDeck 1s ease-in-out 7s forwards,
-        adjustZ 0.5s forwards 7.1s; 
-    z-index: 3;
-}
-#c8 { 
-    animation: 
-        moveLeft 1s ease-in-out 2s forwards,
-        returnDeck 1s ease-in-out 7.5s forwards,
-        adjustZ 0.5s forwards 7.6s; 
-    z-index: 2;
-}
-#c9 { 
-    animation: 
-        moveRight 1s ease-in-out 2.5s forwards,
-        returnDeck 1s ease-in-out 8s forwards,
-        adjustZ 0.5s forwards 8.1s; 
-    z-index: 1;
+  }
 }
 
-
-
-.robot-avatar, .user-avatar{
-    width: 50px;
+@keyframes moveUpThenLeft1 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(-450px) translateY(-400px);
+  }
 }
-.robot-avatar, p, .user-avatar{
-    display: inline;
+
+@keyframes moveUpThenLeft2 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(-400px) translateY(-400px);
+  }
 }
 
-.icon{
-    width: fit-content;
-    display: flex;
+@keyframes moveUpThenLeft3 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(-350px) translateY(-400px);
+  }
+}
+
+@keyframes moveUpMiddle1 {
+  0% {
+    transform: translateX(0) translate(0);
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(25px) translateY(-400px);
+  }
+}
+
+@keyframes moveUpMiddle2 {
+  0% {
+    transform: translateX(0) translate(0);
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(75px) translateY(-400px);
+  }
+}
+
+@keyframes moveUpMiddle3 {
+  0% {
+    transform: translateX(0) translate(0);
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(125px) translateY(-400px);
+  }
+}
+
+@keyframes moveUpRight1 {
+  0% {
+    transform: 0%;
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(500px) translateY(-400px);
+  }
+}
+
+@keyframes moveUpRight2 {
+  0% {
+    transform: 0%;
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(550px) translateY(-400px);
+  }
+}
+
+@keyframes moveUpRight3 {
+  0% {
+    transform: 0%;
+  }
+  50% {
+    transform: translateX(-400px) translateY(0);
+  }
+  100% {
+    transform: translateX(600px) translateY(-400px);
+  }
+}
+
+#c1 {
+  animation: moveRight 1s ease-in-out 0.5s forwards,
+    returnDeck 1s ease-in-out 4s forwards, adjustZ 0.5s forwards 4.1s,
+    moveUpRight3 3s ease-in-out 34s forwards;
+  z-index: 9;
+}
+#c2 {
+  animation: moveLeft 1s ease-in-out 0.5s forwards,
+    returnDeck 1s ease-in-out 4.5s forwards, adjustZ 0.5s forwards 4.6s,
+    moveUpMiddle3 3s ease-in-out 31s forwards;
+  z-index: 8;
+}
+#c3 {
+  animation: moveRight 1s ease-in-out 1s forwards,
+    returnDeck 1s ease-in-out 5s forwards, adjustZ 0.5s forwards 5.1s,
+    moveUpThenLeft3 3s ease-in-out 28s forwards;
+  z-index: 7;
+}
+#c4 {
+  animation: moveLeft 1s ease-in-out 1s forwards,
+    returnDeck 1s ease-in-out 5.5s forwards, adjustZ 0.5s forwards 5.6s,
+    moveUpRight2 3s ease-in-out 25s forwards;
+  z-index: 6;
+}
+#c5 {
+  animation: moveRight 1s ease-in-out 1.5s forwards,
+    returnDeck 1s ease-in-out 6s forwards, adjustZ 0.5s forwards 6.1s,
+    moveUpMiddle2 3s ease-in-out 22s forwards;
+  z-index: 5;
+}
+#c6 {
+  animation: moveLeft 1s ease-in-out 1.5s forwards,
+    returnDeck 1s ease-in-out 6.5s forwards, adjustZ 0.5s forwards 6.6s,
+    moveUpThenLeft2 3s ease-in-out 19s forwards;
+  z-index: 4;
+}
+#c7 {
+  animation: moveRight 1s ease-in-out 2s forwards,
+    returnDeck 1s ease-in-out 7s forwards, adjustZ 0.5s forwards 7.1s,
+    moveUpRight1 3s ease-in-out 16s forwards;
+  z-index: 3;
+}
+#c8 {
+  animation: moveLeft 1s ease-in-out 2s forwards,
+    returnDeck 1s ease-in-out 7.5s forwards, adjustZ 0.5s forwards 7.6s,
+    moveUpMiddle1 3s ease-in-out 13s forwards;
+  z-index: 2;
+}
+#c9 {
+  animation: moveRight 1s ease-in-out 2.5s forwards,
+    returnDeck 1s ease-in-out 8s forwards, adjustZ 0.5s forwards 8.1s,
+    moveUpThenLeft1 3s ease-in-out 10s forwards;
+  z-index: 1;
+}
+
+.robot-avatar,
+.user-avatar {
+  width: 50px;
+}
+.robot-avatar,
+p,
+.user-avatar {
+  display: inline;
+}
+
+.icon {
+  width: fit-content;
+  display: flex;
 }
